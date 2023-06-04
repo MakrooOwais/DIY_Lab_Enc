@@ -24,18 +24,6 @@ void printMAC(const uint8_t * mac_addr){
   Serial.println(macStr);
 }
 
-bool comp(char key1[64], char key2[64])
-{
-  for (int i = 0; i < 64; i++)
-  {
-    if (key1[i] != key2[i])
-    {
-      return false;
-    }
-  }
-  return true;
-}
-
 
 void OnDataRecv(const uint8_t * mac_addr, const uint8_t *incomingData, int len) {
  
