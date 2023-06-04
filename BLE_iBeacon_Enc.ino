@@ -49,7 +49,7 @@ void setup() {
 void loop() {
   static unsigned long lastEventTime = millis();
   if ((millis() - lastEventTime) > 2000) {
-    memcpy(&message.key, "Well... I just so happen to be screwed!", 64);
+    memcpy(&message.key, "Password", 64);
     lastEventTime = millis();
   
     esp_err_t result = esp_now_send(receiverAddress, (uint8_t *) &message, sizeof(message));
