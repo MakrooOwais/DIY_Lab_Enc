@@ -9,7 +9,7 @@ uint8_t masterMacAddress[] = {0x08, 0xB6, 0x1F, 0x33, 0x36, 0xAC};
 static const char* PMK_KEY = "123hjk9i0ii67bte";
 static const char* LMK_KEY = "0ii67bte123hjk9i";
 
-char pwd[64] = "Well... I just so happen to be screwed!";
+char pwd[64] = "Password";
 
 typedef struct struct_message {
     char key[64];
@@ -60,7 +60,7 @@ void OnDataRecv(const uint8_t * mac_addr, const uint8_t *incomingData, int len) 
     digitalWrite(relay, HIGH);
   }
   else{
-    Serial.println("You useless piece of SHIT!!!");
+    Serial.println("Password doesn't match!!");
   }
 
   
